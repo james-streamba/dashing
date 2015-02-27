@@ -11,4 +11,4 @@ var DashboardModule = Backbone.Model.extend({
 
 });
 
-module.exports = new DashboardModule();
+module.exports = DashboardModule();
