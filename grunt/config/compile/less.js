@@ -22,7 +22,8 @@ var taskConfig = function(grunt) {
       cwd: '<%= yeogurt.client %>/',
       dest: '<%= yeogurt.tmp %>/',
       src: [
-        'styles/main.less'
+        'styles/main.less',
+        'bower_components/bootstrap/less/bootstrap.less'
       ],
       ext: '.css'
     },
@@ -43,7 +44,8 @@ var taskConfig = function(grunt) {
       cwd: '<%= yeogurt.client %>/',
       dest: '<%= yeogurt.dist %>/client/',
       src: [
-        'styles/main.less'
+        'styles/main.less',
+        'bower_components/bootstrap/less/bootstrap.less'
       ],
       ext: '.css'
     }

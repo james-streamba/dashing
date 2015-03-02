@@ -10,6 +10,7 @@ var ForgotView = require('./views/account/forgot');
 var SettingsView = require('./views/account/settings');
 var DefaultView = require('./views/layouts/default');
 var IndexView = require('./views/index');
+var DashboardView = require('./views/dashboard/dashboard');
 
 // Handle displaying and cleaning up views
 var currentView;
@@ -31,6 +32,7 @@ var Router = Backbone.Router.extend({
     'reset/:token': 'reset',
     'signup': 'signup',
     'settings': 'settings',
+    'dashboard': 'dashboard',
     '': 'index'
   },
   index: function() {
@@ -40,6 +42,16 @@ var Router = Backbone.Router.extend({
       }
     });
     render(homePage);
+  },
+
+  dashboard: function(){
+
+    var dashboard = new DefaultView({
+      subviews: {
+        '.content': new DashboardView()
+      }
+    });
+    render(dashboard);
   },
 
   login: function() {
